@@ -1,5 +1,7 @@
 # Product Dashboard - Frontend Assignment
 
+## 🚢 Deployment link:https://serene-nasturtium-9263a5.netlify.app/
+
 A modern product dashboard application built with React, Redux Toolkit, and TypeScript, featuring product listing, search, filtering, sorting, and favorites management.
 
 ## 🚀 Features
@@ -102,78 +104,8 @@ src/
 └── App.tsx            # Main app component with routes
 ```
 
-## 🎯 Key Implementation Details
 
-### State Management
-- **Redux Toolkit** for centralized state management
-- **Async Thunks** for API calls (`fetchProducts`, `fetchProductById`)
-- **Selectors** for computed state (filtered/sorted products)
-- **Typed Hooks** (`useAppDispatch`, `useAppSelector`) for type safety
 
-### Search & Filtering
-- **Debounced Search**: 300ms delay to reduce API calls
-- **Category Filter**: Dynamic categories fetched from API
-- **Price Sorting**: Ascending and descending options
-- **Combined Filters**: All filters work together seamlessly
 
-### Favorites Management
-- Favorites stored in Redux store (persists during session)
-- Add/remove favorites from product cards and detail page
-- Badge showing favorite count in navigation
 
-### Testing Strategy
-- **Unit Tests**: Redux slices, selectors, and components
-- **Integration Tests**: End-to-end user flows (search, filter, favorites)
-- **Mocking**: API calls mocked for reliable tests
 
-## 🌐 API Integration
-
-The application uses the [Fake Store API](https://fakestoreapi.com):
-- `GET /products` - Fetch all products
-- `GET /products/:id` - Fetch single product
-- `GET /products/categories` - Fetch all categories
-
-## 🚢 Deployment
-
-### Vercel
-1. Push code to GitHub
-2. Import project in Vercel
-3. Configure build settings:
-   - Build Command: `npm run build`
-   - Output Directory: `dist`
-4. Deploy
-
-### Netlify
-1. Push code to GitHub
-2. Create new site from Git in Netlify
-3. Build settings:
-   - Build command: `npm run build`
-   - Publish directory: `dist`
-4. Deploy
-
-### Render
-1. Push code to GitHub
-2. Create new Static Site in Render
-3. Connect repository
-4. Build command: `npm run build`
-5. Publish directory: `dist`
-
-## 📝 Notes
-
-- The application uses client-side state management. Favorites are stored in Redux and persist during the session but are not saved to a backend.
-- Search is debounced to improve performance and reduce unnecessary re-renders.
-- All components are fully responsive and accessible.
-- The UI follows modern design principles with a dark theme.
-
-## 🎨 UI Features
-
-- Dark theme with slate color palette
-- Responsive grid layout (1-4 columns based on screen size)
-- Hover effects and smooth transitions
-- Loading states and error handling
-- Empty states for better UX
-- Accessible form controls and buttons
-
-## 📄 License
-
-This project is created as part of a frontend developer assignment.
